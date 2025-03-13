@@ -1,4 +1,4 @@
-import pytest
+import pytest # type: ignore
 import pyautogui
 import time
 import os
@@ -8,13 +8,13 @@ from circleshape import collision  # Adjust this based on your actual game logic
 def test_game_launch():
     """Ensure the game starts without crashing."""
     process = os.system("python3 main.py &")  # Run in background
-    time.sleep(3)  # Allow the game to start
+    time.sleep(10)  # Allow the game to start
     assert process == 0, "Game failed to launch"
 
 ### **TEST 2: Player Controls (Up & Space)**
 def test_controls():
     """Simulate key presses to check if movement and shooting work."""
-    time.sleep(2)  # Wait for the game to focus
+    time.sleep(10)  # Wait for the game to focus
 
     pyautogui.press('up')  # Move ship forward
     pyautogui.press('space')  # Fire bullet
