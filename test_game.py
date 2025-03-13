@@ -4,6 +4,11 @@ import time
 import os
 from circleshape import collision  # Adjust this based on your actual game logic import
 
+@pytest.mark.skipif(os.environ.get('DISPLAY', '') == '', reason="No DISPLAY set for headless environment")
+def test_gui_interaction():
+    # Your test code that uses pyautogui
+
+
 ### **TEST 1: Game Startup**
 def test_game_launch():
     """Ensure the game starts without crashing."""
