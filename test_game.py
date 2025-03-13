@@ -30,7 +30,7 @@ def test_collision():
     asteroid = {"x": 100, "y": 100, "radius": 20}
     bullet = {"x": 105, "y": 105, "radius": 5}
     
-    assert collision(asteroid, bullet) == True, "Collision detection failed"
+    assert asteroid.collision(bullet) == True, "Collision detection failed"
 
 ### **TEST 4: Performance Check (FPS)**
 def test_fps():
