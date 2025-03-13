@@ -7,6 +7,7 @@ from circleshape import collision  # Adjust this based on your actual game logic
 @pytest.mark.skipif(os.environ.get('DISPLAY', '') == '', reason="No DISPLAY set for headless environment")
 def test_gui_interaction():
     # Your test code that uses pyautogui
+    pass
 
 
 ### **TEST 1: Game Startup**
