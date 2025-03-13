@@ -1,5 +1,4 @@
 import pytest  # type: ignore
-import pyautogui
 import time
 import os
 from unittest.mock import patch
@@ -21,8 +20,6 @@ def test_controls():
 
     # Mock pyautogui's press function to avoid display dependency
     with patch('pyautogui.press') as mock_press:
-        pyautogui.press('up')  # Move ship forward
-        pyautogui.press('space')  # Fire bullet
 
         mock_press.assert_any_call('up')  # Ensure it was called
         mock_press.assert_any_call('space')  # Ensure it was called
