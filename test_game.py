@@ -4,6 +4,8 @@ import time
 import os
 from unittest.mock import patch
 from circleshape import collision  # Adjust this based on your actual game logic import
+os.environ['DISPLAY'] = ':0'  # Mock DISPLAY variable
+
 
 ### **TEST 1: Game Startup**
 def test_game_launch():
